@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow:wght@600&family=Raleway:wght@700&display=swap');
+
+:root {
+    --font-family: 'Raleway', sans-serif;
+    --bg-color:#F1A661;
+    --primary-color: #FDEEDC;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    /*tamanho mínimo de nossa janela*/
+    min-height: 100vh;
+    display: flex;
+    /*colocando uma direção*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.mensagem {
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+.box {
+    border: 2px solid;
+    display: inline-block;
+    font-size: 4em;
+    padding: 10px;
+    margin: 20px;
+}
