@@ -1,3 +1,5 @@
+//o nome dessa api "Web Speech API"
+
 //pegando o elemento chute
 const elementoChute = document.getElementById('chute');
 
@@ -21,7 +23,11 @@ todo o elemento de fala o que mencionei antes, e chamo a função que exibe em t
 function onSpeak(e) {
     chute = (e.results[0][0].transcript);
     //console.log(e.results[0][0].transcript);
-    exibeChuteNaTela(chute);    
+    //pega o idioma
+    //console.log(e.target.lang);
+    exibeChuteNaTela(chute);
+    //função que faz validaçoões se é um valor inteiro, se está dentro do intervalor ou range de 1 a 1000
+    verificaChuteSeEValido(chute);    
 }
 
 /*função que exibe o chute na tela, ela recebe o parâmetro chute, mostra em tela a mensagem falada, Obs. usamos o "$" para acessar
