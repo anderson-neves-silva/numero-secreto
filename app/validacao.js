@@ -18,11 +18,14 @@ function verificaChuteSeEValido(chute) {
         return
     }
 
-    // verifica se acertou o número secreto, se correto retiramos tudo o contúdo da tela e criamos um novo conteúdo lá
+    /* verifica se acertou o número secreto, se correto retiramos tudo o contúdo da tela e criamos um novo conteúdo lá, 
+    criamos um botão para iniciar o jogo */
     if (numero === numeroSecreto) {
         document.body.innerHTML = `
             <h2>Parabéns você acertou!</h2>
             <h3>O número secreto era ${numeroSecreto}</h3>
+
+            <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
         `
     // a linha abaixo mostra uma mensagem na tela se o número secreto é maior ou menor
     } else if (numero > numeroSecreto) {
@@ -43,3 +46,10 @@ function chuteForInvalido(numero) {
 function numeroMaiorMenorQueOPermitido(numero) {
     return numero > maiorValor || numero < menorValor;
 }
+
+// o botão inicia o jogo, aqui passamos uma função de click, usamos o evento "e", se houver um click no id recarregue a página
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'jogar-novamente') {
+        window.location.reload();
+    }
+});
