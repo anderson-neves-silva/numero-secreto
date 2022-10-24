@@ -61,3 +61,39 @@ h3 {
     background-color: var(--btn-color-hover);
     color: var(--primary-color);
 }
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    .btn-jogar {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .btn-jogar {
+        font-size: 10px;
+    }
+}
